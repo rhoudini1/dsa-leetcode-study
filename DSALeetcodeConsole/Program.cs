@@ -1,3 +1,3 @@
-﻿using DSALeetcodeConsole.Leetcode;
+using DSALeetcodeConsole.Menu;
 
-_1_TwoSum.SolveTests();
+MenuRunner.Run();

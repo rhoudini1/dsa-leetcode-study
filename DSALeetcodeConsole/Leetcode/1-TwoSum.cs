@@ -4,18 +4,7 @@ namespace DSALeetcodeConsole.Leetcode;
 
 public static class _1_TwoSum
 {
-    public static string Name = "1. Two Sum";
-
-    public static void SolveTests()
-    {
-        Console.WriteLine($"Case 1 result: [{string.Join(",", NotSoGoodSolution([2, 7, 11, 15], 9))}]");
-        Console.WriteLine($"Case 2 result: [{string.Join(",", NotSoGoodSolution([3, 2, 4], 6))}]");
-        Console.WriteLine($"Case 3 result: [{string.Join(",", NotSoGoodSolution([3, 3], 6))}]");
-
-        Console.WriteLine($"Case 1 result: [{string.Join(",", Solution([2, 7, 11, 15], 9))}]");
-        Console.WriteLine($"Case 2 result: [{string.Join(",", Solution([3, 2, 4], 6))}]");
-        Console.WriteLine($"Case 3 result: [{string.Join(",", Solution([3, 3], 6))}]");
-    }
+    public const string Name = "1. Two Sum";
 
     public static int[] NotSoGoodSolution(int[] nums, int target)
     {
@@ -62,5 +51,18 @@ public static class _1_TwoSum
             complementDict.Add(nums[i], i);
         }
         return [];
+    }
+
+    public static void SolveTests()
+    {
+        Console.WriteLine("Results from the not so good solution:");
+        Console.WriteLine($"Case 1 result: [{string.Join(",", NotSoGoodSolution([2, 7, 11, 15], 9))}]");
+        Console.WriteLine($"Case 2 result: [{string.Join(",", NotSoGoodSolution([3, 2, 4], 6))}]");
+        Console.WriteLine($"Case 3 result: [{string.Join(",", NotSoGoodSolution([3, 3], 6))}]");
+
+        Console.WriteLine("\nResults from the best solution:");
+        Console.WriteLine($"Case 1 result: [{string.Join(",", Solution([2, 7, 11, 15], 9))}]");
+        Console.WriteLine($"Case 2 result: [{string.Join(",", Solution([3, 2, 4], 6))}]");
+        Console.WriteLine($"Case 3 result: [{string.Join(",", Solution([3, 3], 6))}]");
     }
 }
