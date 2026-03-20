@@ -2,11 +2,11 @@ using System;
 
 namespace DSALeetcodeConsole.Leetcode;
 
-public class _1_TwoSum
+public static class _1_TwoSum
 {
-    public string Name = "1. Two Sum";
+    public static string Name = "1. Two Sum";
 
-    public void SolveTests()
+    public static void SolveTests()
     {
         Console.WriteLine($"Case 1 result: [{string.Join(",", NotSoGoodSolution([2, 7, 11, 15], 9))}]");
         Console.WriteLine($"Case 2 result: [{string.Join(",", NotSoGoodSolution([3, 2, 4], 6))}]");
@@ -17,7 +17,7 @@ public class _1_TwoSum
         Console.WriteLine($"Case 3 result: [{string.Join(",", Solution([3, 3], 6))}]");
     }
 
-    public int[] NotSoGoodSolution(int[] nums, int target)
+    public static int[] NotSoGoodSolution(int[] nums, int target)
     {
         // This problem is very interesting, and probably the most famous from Leetcode.
         // It looks easy at first: try every combination of two numbers and see which one works.
@@ -39,7 +39,7 @@ public class _1_TwoSum
     }
 
     // We can solve this by going through the array a single time!
-    public int[] Solution(int[] nums, int target)
+    public static int[] Solution(int[] nums, int target)
     {
         // We can store some info about the number that we just have seen,
         // so that we can access it in the future if needed.
